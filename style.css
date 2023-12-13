@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    /* background-color: #FAAFBA; */
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    text-align: center;
+}
+
+.content h1{
+    font-size: 65px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.content a{
+    font-size: 23px;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 12px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.content a:hover{
+    background-color: palevioletred;
+    /* color: black; */
+}
+
+.content b:hover{
+    background-color: palevioletred;
+    /* color: black; */
+}
+
+.content b{
+    font-size: 23px;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 12px;
+    border-radius: 50px;
+}
+
+.hover-text::after {
+    content: 'dont even think about it';
+    display: none;
+    background-color: palevioletred;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.hover-text:hover::after {
+    display: inline-block;
+}
+
+.background-clip{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio:16/9){
+    .background-clip{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-aspect-ratio:16/9){
+    .background-clip{
+        width: auto;
+        height: 100%;
+    }
+}
