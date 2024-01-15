@@ -1,35 +1,28 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//     const myButton = document.getElementById("myButton");
-
-//     myButton.addEventListener("mouseover", function () {
-//         myButton.disabled = true;
-//     });
-
-//     myButton.addEventListener("mouseout", function () {
-//         myButton.disabled = false;
-//     });
-// });
-
-// const wrapper = document.querySelector(".wrapper");
 const message = document.querySelector(".message");
 const gif = document.querySelector(".gif");
 const yesButton = document.querySelector(".yesButton");
 const noButton = document.querySelector(".noButton");
 
 yesButton.addEventListener("click", () => {
-  message.innerHTML = "Yay, see you on the 17th!";
+  message.innerHTML = "Mwah, see you on the 17th!";
   gif.src =
-    "https://giphy.com/gifs/boomerangtoons-tom-and-jerry-cat-5dUllWbKVlaqmMTvHb";
+    "https://media4.giphy.com/media/5dUllWbKVlaqmMTvHb/giphy.gif?\
+    cid=ecf05e47lu4gm5libvvqbnubhq74raovnmac2teapqnp0p4j&ep=v1_gifs_related&rid=giphy.gif&ct=g";
 });
 
-noButton.addEventListener("mouseover", () => {
-  const noButtonRect = noButton.getBoundingClientRect();
-  const maxX = window.innerWidth - noButtonRect.width;
-  const maxY = window.innerHeight - noButtonRect.height;
 
-  const randomX = Math.floor(Math.random() * maxX);
-  const randomY = Math.floor(Math.random() * maxY);
-
-  noButton.style.left = randomX + "px";
-  noButton.style.top = randomY + "px";
-});
+function getRandomCoordinate(max) {
+    return Math.floor(Math.random() * max);
+  }
+  
+  noButton.addEventListener("mouseover", () => {
+    const noButtonRect = noButton.getBoundingClientRect();
+    const maximumX = window.innerWidth - noButtonRect.width;
+    const maximumY = window.innerHeight - noButtonRect.height;
+  
+    const randX = getRandomCoordinate(maximumX);
+    const randY = getRandomCoordinate(maximumY);
+  
+    noButton.style.left = randX + "px";
+    noButton.style.top = randY + "px";
+  });
