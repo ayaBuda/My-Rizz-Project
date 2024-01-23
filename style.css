@@ -47,6 +47,7 @@
     right: 0;
     bottom: 0;
     z-index: -1;
+    background-size: cover;
 }
 
 @media (min-aspect-ratio:16/9){
@@ -62,6 +63,7 @@
         height: 100%;
     }
 }
+
 .gif{
     width: 50%;
     height: 50%;
