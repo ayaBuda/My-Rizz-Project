@@ -11,7 +11,7 @@ yesButton.addEventListener("click", () => {
 });
 
 noButton.addEventListener('click', function() {
-  alert('Sorry! "No" is not an option.');
+  alert('Sorry! "No" is not an option :)');
 });
 
 // function getRandomCoordinate(max) {
