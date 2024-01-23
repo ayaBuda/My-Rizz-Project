@@ -10,19 +10,22 @@ yesButton.addEventListener("click", () => {
     cid=ecf05e47lu4gm5libvvqbnubhq74raovnmac2teapqnp0p4j&ep=v1_gifs_related&rid=giphy.gif&ct=g";
 });
 
+noButton.addEventListener('click', function() {
+  alert('Sorry! "No" is not an option.');
+});
 
-function getRandomCoordinate(max) {
-    return Math.floor(Math.random() * max);
-  }
+// function getRandomCoordinate(max) {
+//     return Math.floor(Math.random() * max);
+//   }
   
-  noButton.addEventListener("mouseover", () => {
-    const noButtonRect = noButton.getBoundingClientRect();
-    const maximumX = window.innerWidth - noButtonRect.width;
-    const maximumY = window.innerHeight - noButtonRect.height;
+//   noButton.addEventListener("mouseover", () => {
+//     const noButtonRect = noButton.getBoundingClientRect();
+//     const maximumX = window.innerWidth - noButtonRect.width;
+//     const maximumY = window.innerHeight - noButtonRect.height;
   
-    const randX = getRandomCoordinate(maximumX);
-    const randY = getRandomCoordinate(maximumY);
+//     const randX = getRandomCoordinate(maximumX);
+//     const randY = getRandomCoordinate(maximumY);
   
-    noButton.style.left = randX + "px";
-    noButton.style.top = randY + "px";
-  });
+//     noButton.style.left = randX + "px";
+//     noButton.style.top = randY + "px";
+//   });
